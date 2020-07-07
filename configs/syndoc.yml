@@ -1,0 +1,41 @@
+dataset: 
+    name: syndoc
+    restricted_labels: [1, 4, 6]
+    img_size: [1280, 1280]
+    normalize: True
+    data_augmentation: True
+    blur_radius_range: [0.2, 2]
+    brightness_factor_range: [0.9, 1.1]
+    contrast_factor_range: [0.5, 2]
+    rotation_angle_range: [-10, 10]
+    sampling_ratio_range: [1, 1]
+    sampling_max_nb_pixels: 3.5e+6
+    transposition_weights: [0.25, 0.25, 0.25, 0.25]
+model:
+    name: res_unet18
+    norm_layer:
+        name: 'instance_norm'
+        momentum: 0.1
+        affine: True
+        track_running_stats: False
+        num_groups: 32
+    conv_as_maxpool: True
+    use_deconv: True
+training:
+    cudnn_benchmark: False
+    batch_size: 1
+    n_workers: 4
+    optimizer:
+        name: adam
+        lr: 1.0e-3
+        weight_decay: 1.0e-6
+    scheduler:
+        name: multi_step
+        gamma: 0.5
+        milestones: [30, 60, 80]
+    loss: cross_entropy
+    n_epoches: 100
+    train_stat_interval: 500
+    val_stat_interval: 1000
+    pretrained:
+    resume:

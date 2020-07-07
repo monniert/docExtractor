@@ -1,0 +1,26 @@
+# OS generated files
+*.swp
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# python
+*.py.swp
+*.pyc
+*.pyo
+
+# models (heavy files)
+*.pkl
+
+# data & results
+/datasets
+/models
+/raw_data
+/results
+/runs
+/synthetic_resource
+/zip
