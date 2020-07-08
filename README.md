@@ -63,8 +63,7 @@ CUDA_VISIBLE_DEVICES=gpu_id python src/extractor.py --input_dir inp --output_dir
 - `-dm, --draw_margin`: Draw the margins added during extraction (for visual or debugging 
   purposes)
 
-**NB:** check `src/utils/constant.py` for labels mapping
-
+**NB:** check `src/utils/constant.py` for labels mapping  
 **NB:** the code will automatically run on CPU if no GPU are provided/found
 
 ### 2. Build our segmentation method from scratch
