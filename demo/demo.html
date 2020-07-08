@@ -13128,6 +13128,22 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Select GPU ID</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;CUDA_DEVICE_ORDER&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PCI_BUS_ID&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;CUDA_VISIBLE_DEVICES&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;3&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
@@ -13159,7 +13175,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre><span class="ansi-blue-intense-fg">[2020-07-08 16:46:33] Model res_unet18 initialisated with norm_layer=InstanceNorm2d({&#39;momentum&#39;: 0.1, &#39;affine&#39;: True, &#39;track_running_stats&#39;: False}) and kwargs {&#39;encoder_name&#39;: &#39;resnet18&#39;, &#39;use_ctx_module&#39;: False, &#39;ctx_identity_init&#39;: False, &#39;scale_depth&#39;: 5, &#39;n_init_channels&#39;: 16, &#39;reduced_layers&#39;: False, &#39;no_maxpool&#39;: False, &#39;conv_as_maxpool&#39;: True, &#39;use_deconv&#39;: True, &#39;use_upcatconv&#39;: False, &#39;use_conv1x1&#39;: False, &#39;pretrained_encoder&#39;: False}</span>
+<pre><span class="ansi-blue-intense-fg">[2020-07-08 17:43:59] Model res_unet18 initialisated with norm_layer=InstanceNorm2d({&#39;momentum&#39;: 0.1, &#39;affine&#39;: True, &#39;track_running_stats&#39;: False}) and kwargs {&#39;encoder_name&#39;: &#39;resnet18&#39;, &#39;use_ctx_module&#39;: False, &#39;ctx_identity_init&#39;: False, &#39;scale_depth&#39;: 5, &#39;n_init_channels&#39;: 16, &#39;reduced_layers&#39;: False, &#39;no_maxpool&#39;: False, &#39;conv_as_maxpool&#39;: True, &#39;use_deconv&#39;: True, &#39;use_upcatconv&#39;: False, &#39;use_conv1x1&#39;: False, &#39;pretrained_encoder&#39;: False}</span>
 </pre>
 </div>
 </div>
@@ -13272,19 +13288,6 @@ div#notebook {
 
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
 </div>
 </div>
 
