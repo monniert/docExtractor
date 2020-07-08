@@ -43,6 +43,9 @@ There are several main usages you may be interested in:
 2. build our segmentation method from scratch
 3. fine-tune network on custom datasets
 
+In the `demo` folder, we also provide a jupyter notebook and its html version detailing a 
+step-by-step pipeline to predict segmentation maps for a given image.
+
 ### 1. Element extraction
 
 ```
