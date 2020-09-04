@@ -19,26 +19,22 @@ class ResUNet(nn.Module):
 
     @property
     def name(self):
-        if self.use_dhsegment:
-            return 'dhsegment_raw'
-        else:
-            return self.enc_name.replace('res', 'res_u')
+        return self.enc_name.replace('res', 'res_u')
 
     def __init__(self, n_classes, **kwargs):
         super().__init__()
         self.n_classes = n_classes
         self.norm_layer_kwargs = kwargs.pop('norm_layer', dict())
         self.norm_layer = get_norm_layer(**self.norm_layer_kwargs)
-        self.use_dhsegment = kwargs.get('use_dhsegment', False)
         self.no_maxpool = kwargs.get('no_maxpool', False)
-        self.conv_as_maxpool = kwargs.get('conv_as_maxpool', False)
+        self.conv_as_maxpool = kwargs.get('conv_as_maxpool', True)
         self.use_upcatconv = kwargs.get('use_upcatconv', False)
         self.use_deconv = kwargs.get('use_deconv', False)
         assert not (self.use_deconv and self.use_upcatconv)
         self.same_up_channels = kwargs.get('same_up_channels', False)
         self.use_conv1x1 = kwargs.get('use_conv1x1', False)
         assert not (self.conv_as_maxpool and self.no_maxpool)
-        self.enc_name = 'resnet50' if self.use_dhsegment else kwargs.get('encoder_name', 'resnet18')
+        self.enc_name = kwargs.get('encoder_name', 'resnet18')
         self.reduced_layers = kwargs.get('reduced_layers', False) and self.enc_name not in ['resnet18, resnet34']
 
         pretrained = kwargs.get('pretrained_encoder', True)
