@@ -144,7 +144,7 @@ If you find this work useful in your research, please consider citing:
 
 ```
 @inproceedings{monnier2020docExtractor,
-  title={docExtractor: An off-the-shelf historical document element extraction},
+  title={{docExtractor: An off-the-shelf historical document element extraction}},
   author={Monnier, Tom and Aubry, Mathieu},
   booktitle={ICFHR},
   year={2020},
