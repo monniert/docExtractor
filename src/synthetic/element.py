@@ -10,7 +10,7 @@ from random import randint, choice as rand_choice
 
 import arabic_reshaper
 from bidi.algorithm import get_display
-from translation import google
+# from googletrans import Translator
 from unidecode import unidecode
 
 from utils import use_seed
@@ -29,6 +29,7 @@ from synthetic.resource import (ResourceDatabase, BACKGROUND_RESRC_NAME, CONTEXT
 
 
 DATABASE = ResourceDatabase()
+TRANSLATOR = None  # Translator(service_urls=['translate.google.com'])
 
 BLURED_BORDER_WIDTH_RANGE = (1, 7)
 GAUSSIAN_NOISE_STD_RANGE = (2, 10)
@@ -73,10 +74,10 @@ TEXT_BBOX_BORDER_WIDTH_RANGE = (1, 6)
 TEXT_BBOX_PADDING_RANGE = (0, 20)
 TEXT_COLORED_FREQ = 0.5
 TEXT_FONT_TYPE_RATIO = {
-    'arabic': 0.1,
-    'chinese': 0.1,
-    'handwritten': 0.4,
-    'normal': 0.4,
+    'arabic': 0,
+    'chinese': 0,
+    'handwritten': 0.5,
+    'normal': 0.5,
 }
 TEXT_JUSTIFIED_PARAGRAPH_FREQ = 0.7
 TEXT_ROTATION_ANGLE_RANGE = (-60, 60)
@@ -621,10 +622,10 @@ class AbstractTextElement(AbstractElement):
         if self.font_type in ['normal', 'handwritten']:
             text = unidecode(text)
         elif self.font_type == 'arabic':
-            text = google(text, src='en', dst='ar')
+            text = TRANSLATOR.translate(text, src='en', dest='ar').text
             text = get_display(arabic_reshaper.reshape(text))
         elif self.font_type == 'chinese':
-            text = google(text, src='en', dst='zh-CN')
+            text = TRANSLATOR.translate(text, src='en', dest='zh-CN').text
         else:
             raise NotImplementedError
 

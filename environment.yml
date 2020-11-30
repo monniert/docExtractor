@@ -6,7 +6,7 @@ channels:
 dependencies:
   - _libgcc_mutex=0.1
   - bzip2=1.0.8
-  - ca-certificates=2020.4.5.1
+  - ca-certificates=2020.1.1
   - cairo=1.14.12
   - certifi=2020.4.5.1
   - cffi=1.14.0
@@ -119,5 +119,4 @@ dependencies:
     - pdf2image==1.5.4
     - python-bidi==0.4.2
     - requests==2.23.0
-    - translation==1.0.5
     - urllib3==1.25.8
