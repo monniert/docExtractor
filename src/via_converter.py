@@ -29,7 +29,7 @@ class ViaJson2Image:
         json_file = coerce_to_path_and_check_exist(json_file)
         with open(json_file, mode='r') as f:
             result = json.load(f)
-        return result
+        return result.get('_via_img_metadata', result)
 
     def run(self):
         for _, annot in self.annotations.items():
@@ -62,6 +62,9 @@ class ViaJson2Image:
             elif shape['name'] == 'polygon':
                 polygon = list(zip(shape['all_points_x'], shape['all_points_y']))
                 draw.polygon(polygon, fill=self.color)
+            elif shape['name'] == 'rect':
+                x, y, w, h = shape['x'], shape['y'], shape['width'], shape['height']
+                draw.rectangle([(x, y), (x+w, y+h)], fill=self.color)
             else:
                 raise NotImplementedError('shape "{}" not implemented'.format(shape['name']))
 
