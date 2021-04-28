@@ -114,9 +114,13 @@ dependencies:
   - pip:
     - arabic-reshaper==2.0.15
     - chardet==3.0.4
+    - filelock==3.0.12
     - future==0.18.2
+    - gdown==3.12.2
     - idna==2.9
     - pdf2image==1.5.4
+    - pysocks==1.7.1
     - python-bidi==0.4.2
     - requests==2.23.0
+    - tqdm==4.60.0
     - urllib3==1.25.8

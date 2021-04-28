@@ -15,6 +15,7 @@ Thumbs.db
 
 # models (heavy files)
 *.pkl
+*.zip
 
 # data & results
 /datasets

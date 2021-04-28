@@ -1,10 +1,9 @@
 # docExtractor
 
-Pytorch implementation of "docExtractor: An off-the-shelf historical document element 
-extraction" paper:
-
-[Paper](http://imagine.enpc.fr/~monniert/docExtractor/docExtractor.pdf) | [Project
-webpage](http://imagine.enpc.fr/~monniert/docExtractor)
+Full pytorch implementation of "docExtractor: An off-the-shelf historical document element 
+extraction" paper, check our 
+[**paper**](http://imagine.enpc.fr/~monniert/docExtractor/docExtractor.pdf) and 
+[**webpage**](http://imagine.enpc.fr/~monniert/docExtractor) for details!
 
 ![teaser.jpg](http://imagine.enpc.fr/~monniert/docExtractor/teaser.jpg)
 
@@ -27,13 +26,22 @@ conda activate docExtractor
 
 The following command will download:
 
-- synthetic resources needed to generate SynDoc (manually collected ones and Wikiart dataset)
 - our trained model
+- SynDoc dataset: 10k generated images with line-level page segmentation ground truth
+- synthetic resources needed to generate SynDoc (manually collected ones and Wikiart dataset)
 - IlluHisDoc dataset
 
 ```
 ./download.sh
 ```
+
+**NB:** it may happen that `gdown` hangs, if so you can download following resources by hand:
+
+- pretrained model: 
+  `https://drive.google.com/file/d/13kHXW2vq30dJ10rGubDJBtrspZ_UyrkT/view?usp=sharing`
+- SynDoc: 
+  `https://drive.google.com/file/d/1_goCKP5VeStjdDS0nGeZBPqPoLCMNyb6/view?usp=sharing`
+ 
 
 ## How to use :rocket:
 
@@ -43,7 +51,7 @@ There are several main usages you may be interested in:
 2. build our segmentation method from scratch
 3. fine-tune network on custom datasets
 
-In the `demo` folder, we also provide a jupyter notebook and its html version detailing a 
+In the `demo` folder, we provide a jupyter notebook and its html version detailing a 
 step-by-step pipeline to predict segmentation maps for a given image.
 
 ### 1. Element extraction
@@ -74,6 +82,9 @@ CUDA_VISIBLE_DEVICES=gpu_id python src/extractor.py --input_dir inp --output_dir
 This would result in a model similar to the one located in `models/default/model.pkl`.
 
 #### a) Generate SynDoc dataset
+
+This process can be a bit long, you can skip this step and directly use downloaded SynDoc 
+dataset located at `datasets/syndoc`.
 
 ```
 python src/syndoc_generator.py -d dataset_name -n nb_train --merged_labels
