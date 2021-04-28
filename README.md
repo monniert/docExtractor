@@ -1,8 +1,9 @@
 # docExtractor
 
-Full pytorch implementation of "**docExtractor: An off-the-shelf historical document element 
-extraction**" paper, check out our 
-[**paper**](http://imagine.enpc.fr/~monniert/docExtractor/docExtractor.pdf) and 
+Pytorch implementation of "**docExtractor: An off-the-shelf historical document element 
+extraction**" paper (ICFHR 2020, oral)
+
+Check out our [**paper**](http://imagine.enpc.fr/~monniert/docExtractor/docExtractor.pdf) and 
 [**webpage**](http://imagine.enpc.fr/~monniert/docExtractor) for details!
 
 ![teaser.jpg](http://imagine.enpc.fr/~monniert/docExtractor/teaser.jpg)
@@ -82,8 +83,7 @@ This would result in a model similar to the one located in `models/default/model
 
 #### a) Generate SynDoc dataset
 
-This process can be a bit long, you can skip this step and directly use downloaded SynDoc 
-dataset located at `datasets/syndoc`.
+You can skip this step if you already downloaded SynDoc dataset using the script above.
 
 ```
 python src/syndoc_generator.py -d dataset_name -n nb_train --merged_labels
