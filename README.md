@@ -38,10 +38,9 @@ The following command will download:
 **NB:** it may happen that `gdown` hangs, if so you can download following resources by hand:
 
 - pretrained model: 
-  `https://drive.google.com/file/d/13kHXW2vq30dJ10rGubDJBtrspZ_UyrkT/view?usp=sharing`
-- SynDoc: 
-  `https://drive.google.com/file/d/1_goCKP5VeStjdDS0nGeZBPqPoLCMNyb6/view?usp=sharing`
- 
+  https://drive.google.com/file/d/13kHXW2vq30dJ10rGubDJBtrspZ_UyrkT/view?usp=sharing
+- SynDoc: https://drive.google.com/file/d/1_goCKP5VeStjdDS0nGeZBPqPoLCMNyb6/view?usp=sharing
+- IlluHisDoc: https://www.dropbox.com/s/bbpb9lzanjtj9f9/illuhisdoc.zip?dl=0
 
 ## How to use :rocket:
 
