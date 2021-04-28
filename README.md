@@ -7,7 +7,7 @@ extraction" paper, check our
 
 ![teaser.jpg](http://imagine.enpc.fr/~monniert/docExtractor/teaser.jpg)
 
-## Installation :construction_worker:
+## Installation
 
 ### Prerequisites
 
