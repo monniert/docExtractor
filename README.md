@@ -1,13 +1,13 @@
 # docExtractor
 
-Full pytorch implementation of "docExtractor: An off-the-shelf historical document element 
-extraction" paper, check our 
+Full pytorch implementation of "**docExtractor: An off-the-shelf historical document element 
+extraction**" paper, check out our 
 [**paper**](http://imagine.enpc.fr/~monniert/docExtractor/docExtractor.pdf) and 
 [**webpage**](http://imagine.enpc.fr/~monniert/docExtractor) for details!
 
 ![teaser.jpg](http://imagine.enpc.fr/~monniert/docExtractor/teaser.jpg)
 
-## Installation
+## Installation :contruction_worker:
 
 ### Prerequisites
 
