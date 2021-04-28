@@ -8,6 +8,17 @@ Check out our [**paper**](http://imagine.enpc.fr/~monniert/docExtractor/docExtra
 
 ![teaser.jpg](http://imagine.enpc.fr/~monniert/docExtractor/teaser.jpg)
 
+If you find this work useful in your research, please cite:
+
+```
+@inproceedings{monnier2020docExtractor,
+  title={{docExtractor: An off-the-shelf historical document element extraction}},
+  author={Monnier, Tom and Aubry, Mathieu},
+  booktitle={ICFHR},
+  year={2020},
+}
+```
+
 ## Installation :construction_worker:
 
 ### Prerequisites
@@ -147,16 +158,3 @@ python src/iiif_downloader.py -f filename.txt -o output_dir --width W --height H
 
 **NB:** Be aware that if both `width` and `height` arguments are specified, aspect ratio 
 won't be kept. Common usage is to specify a fixed height only.
-
-## How to cite? :clipboard:
-
-If you find this work useful in your research, please consider citing:
-
-```
-@inproceedings{monnier2020docExtractor,
-  title={{docExtractor: An off-the-shelf historical document element extraction}},
-  author={Monnier, Tom and Aubry, Mathieu},
-  booktitle={ICFHR},
-  year={2020},
-}
-```
