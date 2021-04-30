@@ -1,14 +1,14 @@
 # docExtractor
 
-Pytorch implementation of "**docExtractor: An off-the-shelf historical document element 
-extraction**" paper (ICFHR 2020, oral)
+Pytorch implementation of "[**docExtractor: An off-the-shelf historical document element 
+extraction**](https://arxiv.org/abs/2012.08191)" paper (accepted at ICFHR 2020 as an oral)
 
-Check out our [**paper**](http://imagine.enpc.fr/~monniert/docExtractor/docExtractor.pdf) and 
-[**webpage**](http://imagine.enpc.fr/~monniert/docExtractor) for details!
+Check out our [**paper**](https://imagine.enpc.fr/~monniert/docExtractor/docExtractor.pdf) 
+and [**webpage**](https://imagine.enpc.fr/~monniert/docExtractor) for details!
 
-![teaser.jpg](http://imagine.enpc.fr/~monniert/docExtractor/teaser.jpg)
+![teaser.jpg](https://imagine.enpc.fr/~monniert/docExtractor/teaser.jpg)
 
-If you find this work useful in your research, please cite:
+If you find this code useful in your research, please cite:
 
 ```
 @inproceedings{monnier2020docExtractor,
@@ -47,12 +47,18 @@ The following command will download:
 ./download.sh
 ```
 
-**NB:** it may happen that `gdown` hangs, if so you can download following resources by hand:
+**NB:** it may happen that `gdown` hangs, if so you can download them by hand, then unzip and 
+move them to appropriate folders (see corresponding scripts):
 
-- pretrained model: 
-  https://drive.google.com/file/d/13kHXW2vq30dJ10rGubDJBtrspZ_UyrkT/view?usp=sharing
-- SynDoc: https://drive.google.com/file/d/1_goCKP5VeStjdDS0nGeZBPqPoLCMNyb6/view?usp=sharing
-- IlluHisDoc: https://www.dropbox.com/s/bbpb9lzanjtj9f9/illuhisdoc.zip?dl=0
+- [pretrained model gdrive 
+  link](https://drive.google.com/file/d/13kHXW2vq30dJ10rGubDJBtrspZ_UyrkT/view?usp=sharing)
+- [SynDoc gdrive 
+  link](https://drive.google.com/file/d/1_goCKP5VeStjdDS0nGeZBPqPoLCMNyb6/view?usp=sharing)
+- [synthetic resource dropbox
+  link](https://www.dropbox.com/s/tiqqb166f5ygzx2/synthetic_resource.zip?dl=0)
+- [wikiart source 
+  link](http://web.fsktm.um.edu.my/~cschan/source/ICIP2017/wikiart.zip)
+- [IlluHisDoc dropbox link](https://www.dropbox.com/s/bbpb9lzanjtj9f9/illuhisdoc.zip?dl=0)
 
 ## How to use :rocket:
 
@@ -62,8 +68,8 @@ There are several main usages you may be interested in:
 2. build our segmentation method from scratch
 3. fine-tune network on custom datasets
 
-In the `demo` folder, we provide a jupyter notebook and its html version detailing a 
-step-by-step pipeline to predict segmentation maps for a given image.
+**Demo:** in the `demo` folder, we provide a jupyter notebook and its html version detailing 
+a step-by-step pipeline to predict segmentation maps for a given image.
 
 ### 1. Element extraction
 
@@ -94,7 +100,7 @@ This would result in a model similar to the one located in `models/default/model
 
 #### a) Generate SynDoc dataset
 
-You can skip this step if you already downloaded SynDoc dataset using the script above.
+**You can skip this step if you have already downloaded SynDoc using the script above.**
 
 ```
 python src/syndoc_generator.py -d dataset_name -n nb_train --merged_labels
