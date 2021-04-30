@@ -71,6 +71,8 @@ There are several main usages you may be interested in:
 **Demo:** in the `demo` folder, we provide a jupyter notebook and its html version detailing 
 a step-by-step pipeline to predict segmentation maps for a given image.
 
+![preview.png](./demo/preview.png)
+
 ### 1. Element extraction
 
 ```
