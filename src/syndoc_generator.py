@@ -15,10 +15,11 @@ class SyntheticDocumentDatasetGenerator:
     """Create a dataset (train/val/test) by generating synthetic random documents."""
 
     def __init__(self, output_dir=SYNTHETIC_DOCUMENT_DATASET_PATH, merged_labels=True, baseline_as_label=False,
-                 verbose=True):
+                 text_border_label=True, verbose=True):
         self.output_dir = coerce_to_path_and_create_dir(output_dir)
         self.merged_labels = merged_labels
         self.baseline_as_label = baseline_as_label
+        self.text_border_label = text_border_label
         self.verbose = verbose
         (self.output_dir / 'train').mkdir(exist_ok=True)
         (self.output_dir / 'val').mkdir(exist_ok=True)
@@ -31,7 +32,8 @@ class SyntheticDocumentDatasetGenerator:
             nb_test = int(nb_train * nb_test)
         shift = 0
         max_len_id = len(str(nb_train + nb_val + nb_test - 1))
-        kwargs = {'baseline_as_label': self.baseline_as_label, 'merged_labels': self.merged_labels}
+        kwargs = {'baseline_as_label': self.baseline_as_label, 'merged_labels': self.merged_labels,
+                  'text_border_label': self.text_border_label}
         for name, nb in zip(['train', 'val', 'test'], [nb_train, nb_val, nb_test]):
             if self.verbose:
                 print_info('Creating {} set...'.format(name))
@@ -55,8 +57,10 @@ if __name__ == '__main__':
     parser.add_argument('-m', '--merged_labels', action='store_true', help='Merge labels into illustration and text')
     parser.add_argument('-b', '--baseline_as_label', action='store_true', help='Draw baseline labels instead of text'
                         'line ones')
+    parser.add_argument('-ntb', '--no_text_border', action='store_false', help='Not draw text border label')
     args = parser.parse_args()
 
     gen = SyntheticDocumentDatasetGenerator(DATASETS_PATH / args.dataset_name, merged_labels=args.merged_labels,
-                                            baseline_as_label=args.baseline_as_label)
+                                            baseline_as_label=args.baseline_as_label,
+                                            text_border_label=args.no_text_border)
     gen.run(args.nb_train)
