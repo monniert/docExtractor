@@ -76,7 +76,7 @@ class Tester:
         self.seg_maps.append(pred)
 
         if label is not None:
-            gt = label.data.max(0)[1].cpu().numpy()
+            gt = label.cpu().numpy()
             self.metrics.update(gt, pred)
 
     def save_metrics(self):
