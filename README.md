@@ -6,7 +6,7 @@ extraction**](https://arxiv.org/abs/2012.08191)" paper (accepted at ICFHR 2020 a
 Check out our [**paper**](https://imagine.enpc.fr/~monniert/docExtractor/docExtractor.pdf) 
 and [**webpage**](https://imagine.enpc.fr/~monniert/docExtractor) for details!
 
-![teaser.jpg](https://imagine.enpc.fr/~monniert/docExtractor/teaser.jpg)
+![teaser.jpg](http://imagine.enpc.fr/~monniert/docExtractor/teaser.jpg)
 
 If you find this code useful in your research, please cite:
 
