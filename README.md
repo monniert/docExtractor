@@ -8,7 +8,7 @@ and [**webpage**](http://imagine.enpc.fr/~monniert/docExtractor) for details!
 
 ![teaser.jpg](http://imagine.enpc.fr/~monniert/docExtractor/teaser.jpg)
 
-If you find this code useful in your research, please cite:
+If you find this code useful, don't forget to star the repo ⭐ and cite the paper:
 
 ```
 @inproceedings{monnier2020docExtractor,
