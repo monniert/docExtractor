@@ -95,7 +95,7 @@ class Tester:
             pred_img = LabeledArray2Image.convert(pred, label_color_mapping=self.dataset.label_idx_color_mapping)
             pred_img.save(self.seg_dir / "{}.png".format(name))
 
-            img = resize(Image.open(self.dataset.input_files[k]), pred_img.size, keep_aspect_ratio=False)
+            img = resize(Image.open(self.dataset.input_files[k]).convert('RGB'), pred_img.size, keep_aspect_ratio=False)
             blend_img = Image.blend(img, pred_img, alpha=0.4)
             blend_img.convert("RGB").save(self.blend_dir / "{}.jpg".format(name))
 
