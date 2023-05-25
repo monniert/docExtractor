@@ -3,7 +3,7 @@
 Pytorch implementation of "[**docExtractor: An off-the-shelf historical document element 
 extraction**](https://arxiv.org/abs/2012.08191)" paper (accepted at ICFHR 2020 as an oral)
 
-Check out our [**paper**](http://imagine.enpc.fr/~monniert/docExtractor/docExtractor.pdf) 
+Check out our [**paper**](https://arxiv.org/abs/2012.08191) 
 and [**webpage**](http://imagine.enpc.fr/~monniert/docExtractor) for details!
 
 ![teaser.jpg](http://imagine.enpc.fr/~monniert/docExtractor/teaser.jpg)
